@@ -91,7 +91,6 @@ class ManageLLM:
             device_map='auto',
         )
 
-
     def ans_from_api(self, prompts: str | list[str]) -> list:
 
         # 如果是字符串，转成列表
@@ -104,6 +103,7 @@ class ManageLLM:
                 model=self.model_name,
                 temperature=0,
                 messages=[
+                    {'role': 'system', 'content': 'You are a helpful assistant.'},
                     {'role': 'user', 'content': prompt}],
             )
             reply.append(completion.choices[0].message.content)  # 只增加回答，去掉其他信息
@@ -118,6 +118,7 @@ class ManageLLM:
             message_list = []
             for prompt in prompts:
                 message_list.append([
+                    {'role': 'system', 'content': 'You are a helpful assistant.'},
                     {'role': 'user', 'content': prompt}
                     ])
             # tokenizing
@@ -140,7 +141,6 @@ class ManageLLM:
             elif 'Qwen' in self.model_name or 'qwen' in self.model_name:
                 terminators = self.pipeline.tokenizer.eos_token_id
 
-
             # 批量生成回复
             outputs = self.pipeline(
                 prompts,
@@ -158,7 +158,12 @@ class ManageLLM:
             return reply
 
         elif 'Phi' in self.model_name:
-            message_list= [{'role': 'user', 'content': prompt} for prompt in prompts]
+            message_list = []
+            for prompt in prompts:
+                message_list.append([
+                    {'role': 'system', 'content': 'You are a helpful assistant.'},
+                    {'role': 'user', 'content': prompt}
+                    ])
             outputs = self.pipeline(
                 message_list,
                 max_new_tokens=2048,
@@ -168,7 +173,5 @@ class ManageLLM:
             )
             return [outputs[0]['generated_text'][1]['content']]
 
-
-# * 用法
 if __name__ == '__main__':
     manager = ManageLLM()

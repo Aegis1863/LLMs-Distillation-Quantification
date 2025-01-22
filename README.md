@@ -2,6 +2,16 @@
 
 This repository provides two complementary metrics for quantifying LLM distillation in Large Language Models (LLMs). Our metrics helps assess the extent of model homogenization and potential risks in the distillation process.
 
+## ❗️Warning
+
+**Data distillation technology is one of the common techniques used in building LLMs. Our research focuses on quantifying and evaluating the extent of LLM distillation, aiming to promote greater transparency and diversity in the core technologies of LLMs.**
+
+**We prohibit the use of this research as a tool for competition and attacks between any entities.**
+
+<div align="center">
+    <img src="images/claim.png" width="100%" />
+</div>
+
 ## Introduction
 
 <div align="center">
@@ -20,7 +30,7 @@ Model distillation transfers knowledge from large language models to smaller one
 - Most popular LLMs show high distillation degrees, with exceptions like *Claude-3.5-Sonnet* and *Doubao-Pro-32k*
 - Base LLMs exhibit higher distillation degrees than aligned versions
 
-Through this work, we advocate for more independent LLM development and transparent technical documentation to enhance model robustness and safety. For more details, please refer to [our paper](./paper.pdf).
+Through this work, we advocate for more independent LLM development and transparent technical documentation to enhance model robustness and safety. For more details, please refer to [our paper](./paper.pdf) or [arxiv](https://arxiv.org/abs/2501.12619).
 
 ## Main Result
 
@@ -90,7 +100,7 @@ To run our implementation, you can open `identity_jailbreak\run_gptfuzzer.py` an
 
 2. Set the maximum number of jailbreak attempts, for example: `max_query = 1000`. If you need to adjust details, you can modify the parameters when calling `GPTFuzzerIdentity`.
 
-3. Set a Helper LLM to assist in executing template mutations. **This model must be able to ignore safety principle**. We recommend locally deploying [Meta-Llama-3-8B-Instruct-Jailbroken](https://huggingface.co/cooperleong00/Meta-Llama-3-8B-Instruct-Jailbroken). Set the model name and file path in the `helper_custom_api` dictionary:
+3. Set a Helper LLM to assist in executing template mutations. **This model must be able to ignore safety principle**. We recommend locally deploying [Meta-Llama-3-8B-Instruct-Jailbroken](https://huggingface.co/cooperleong00/Meta-Llama-3-8B-Instruct-Jailbroken), which has no safety alignment and has strong instruction following capabilities. Set the model name and file path in the `helper_custom_api` dictionary:
 
    ```python
    helper_custom_api = {
@@ -101,7 +111,7 @@ To run our implementation, you can open `identity_jailbreak\run_gptfuzzer.py` an
    helper.load_model(custom_prompt='who are you')
    ```
 
-4. Set an Eval_model, such as GPT4o-mini. In the `gpt_4omini_custom_api` dictionary, set the model name, API key, and URL. The `fact` parameter is predefined, but you can modify it if needed.
+4. Set an Eval_model, such as GPT4o-mini. In the `gpt_4omini_custom_api` dictionary, set the model name, API key, and URL. The `fact` parameter is predefined in code, but you can modify it if needed.
 
    ```python
    gpt_4omini_custom_api = {'model_name': 'gpt-4o-mini',
@@ -139,12 +149,13 @@ Finally, we combine the responses from the reference model and test model with t
 ## Citation
 
 ```
-@misc{DistillationQuantification2025,
-      author = {Sunbowen Lee, Junting Zhou, Chang Ao, Kaige Li, Xinrun Du, Sirui  He, Jiaheng Liu, Min Yang, Zhoufutu Wen, Shiwen Ni},
-      title = {{LLMs Distillation Quantification}},
-      year = {2025},
-      publisher = {GitHub},
-      journal = {GitHub repository},
-      howpublished = {\url{https://github.com/Aegis1863/LLMs-Distillation-Quantification}},
+@misc{lee2025distillationquantificationlargelanguage,
+      title={Distillation Quantification for Large Language Models},
+      author={Sunbowen Lee and Junting Zhou and Chang Ao and Kaige Li and Xinrun Du and Sirui He and Jiaheng Liu and Min Yang and Zhoufutu Wen and Shiwen Ni},
+      year={2025},
+      eprint={2501.12619},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2501.12619},
 }
 ```
