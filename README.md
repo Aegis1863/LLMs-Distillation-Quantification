@@ -90,7 +90,7 @@ To run our implementation, you can open `identity_jailbreak\run_gptfuzzer.py` an
 
 2. Set the maximum number of jailbreak attempts, for example: `max_query = 1000`. If you need to adjust details, you can modify the parameters when calling `GPTFuzzerIdentity`.
 
-3. Set a Helper LLM to assist in executing template mutations. **This model must be able to ignore safety principle**. We recommend locally deploying [Meta-Llama-3-8B-Instruct-Jailbroken](https://huggingface.co/cooperleong00/Meta-Llama-3-8B-Instruct-Jailbroken). Set the model name and file path in the `helper_custom_api` dictionary:
+3. Set a Helper LLM to assist in executing template mutations. **This model must be able to ignore safety principle**. We recommend locally deploying [Meta-Llama-3-8B-Instruct-Jailbroken](https://huggingface.co/cooperleong00/Meta-Llama-3-8B-Instruct-Jailbroken), which has no safety alignment and has strong instruction following capabilities. Set the model name and file path in the `helper_custom_api` dictionary:
 
    ```python
    helper_custom_api = {
@@ -101,7 +101,7 @@ To run our implementation, you can open `identity_jailbreak\run_gptfuzzer.py` an
    helper.load_model(custom_prompt='who are you')
    ```
 
-4. Set an Eval_model, such as GPT4o-mini. In the `gpt_4omini_custom_api` dictionary, set the model name, API key, and URL. The `fact` parameter is predefined, but you can modify it if needed.
+4. Set an Eval_model, such as GPT4o-mini. In the `gpt_4omini_custom_api` dictionary, set the model name, API key, and URL. The `fact` parameter is predefined in code, but you can modify it if needed.
 
    ```python
    gpt_4omini_custom_api = {'model_name': 'gpt-4o-mini',
