@@ -20,7 +20,7 @@ Model distillation transfers knowledge from large language models to smaller one
 - Most popular LLMs show high distillation degrees, with exceptions like *Claude-3.5-Sonnet* and *Doubao-Pro-32k*
 - Base LLMs exhibit higher distillation degrees than aligned versions
 
-Through this work, we advocate for more independent LLM development and transparent technical documentation to enhance model robustness and safety. For more details, please refer to [our paper](./paper.pdf).
+Through this work, we advocate for more independent LLM development and transparent technical documentation to enhance model robustness and safety. For more details, please refer to [our paper](./paper.pdf) or [arxiv](https://arxiv.org/abs/2501.12619).
 
 ## Main Result
 
@@ -139,12 +139,13 @@ Finally, we combine the responses from the reference model and test model with t
 ## Citation
 
 ```
-@misc{DistillationQuantification2025,
-      author = {Sunbowen Lee, Junting Zhou, Chang Ao, Kaige Li, Xinrun Du, Sirui  He, Jiaheng Liu, Min Yang, Zhoufutu Wen, Shiwen Ni},
-      title = {{LLMs Distillation Quantification}},
-      year = {2025},
-      publisher = {GitHub},
-      journal = {GitHub repository},
-      howpublished = {\url{https://github.com/Aegis1863/LLMs-Distillation-Quantification}},
+@misc{lee2025distillationquantificationlargelanguage,
+      title={Distillation Quantification for Large Language Models},
+      author={Sunbowen Lee and Junting Zhou and Chang Ao and Kaige Li and Xinrun Du and Sirui He and Jiaheng Liu and Min Yang and Zhoufutu Wen and Shiwen Ni},
+      year={2025},
+      eprint={2501.12619},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2501.12619},
 }
 ```
