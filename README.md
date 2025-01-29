@@ -4,7 +4,9 @@ This repository provides two complementary metrics for quantifying LLM distillat
 
 ## Claim
 
-**Data distillation technology is one of the common techniques used in building LLMs. Our research focuses on quantifying and evaluating the extent of LLM distillation, aiming to promote greater transparency and diversity in the core technologies of LLMs. This research is prohibited from becoming a tool for competition and attacks between companies or nations.**
+**Data distillation technology is one of the common techniques used in building LLMs. Our research focuses on quantifying and evaluating the extent of LLM distillation, aiming to promote greater transparency and diversity in the core technologies of LLMs.**
+
+**Prohibit the use of this research as a tool for competition and attacks between companies or nations.**
 
 <div align="center">
     <img src="images/claim.png" width="100%" />
