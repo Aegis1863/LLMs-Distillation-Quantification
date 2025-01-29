@@ -2,7 +2,7 @@
 
 This repository provides two complementary metrics for quantifying LLM distillation in Large Language Models (LLMs). Our metrics helps assess the extent of model homogenization and potential risks in the distillation process.
 
-## Claim
+## ❗️Warning
 
 **Data distillation technology is one of the common techniques used in building LLMs. Our research focuses on quantifying and evaluating the extent of LLM distillation, aiming to promote greater transparency and diversity in the core technologies of LLMs.**
 
