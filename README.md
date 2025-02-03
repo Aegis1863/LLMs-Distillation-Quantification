@@ -37,6 +37,10 @@ Through this work, we advocate for more independent LLM development and transpar
 ### Identity Consistency Evaluation (ICE) Results
 The ICE results show that *GLM4-Plus*, *Qwen-Max-0919*, and *DeepSeek-V3* are the three LLMs with the highest number of suspected responses, suggesting a higher degree of distillation. In contrast, *Claude-3.5-Sonnet* and *Doubao-Pro-32k* exhibited almost no suspicious responses, indicating a low likelihood of distillation for these LLMs.
 
+- **Loose Score**: There are any logical contradictions;
+- **Strict Score**: There are logical contradictions and it indicates that it is a product of OpenAI or other companies;
+- **Hard Score**: These samples belong to **Strict Score**, but there is no misleading information in their prompts.
+
 <div align="center">
     <img src="images/jailbreak_main_result.png" width="100%" />
 </div>
