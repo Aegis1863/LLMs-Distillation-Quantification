@@ -149,17 +149,3 @@ Next, we collect the evaluation prompt set mentioned above and request responses
 
 - Step 3:
 Finally, we combine the responses from the reference model and test model with the scoring prompt template. Using LLM as a judge, we calculate the response similarity score.
-
-## Citation
-
-```
-@misc{lee2025distillationquantificationlargelanguage,
-      title={Distillation Quantification for Large Language Models},
-      author={Sunbowen Lee and Junting Zhou and Chang Ao and Kaige Li and Xinrun Du and Sirui He and Jiaheng Liu and Min Yang and Zhoufutu Wen and Shiwen Ni},
-      year={2025},
-      eprint={2501.12619},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2501.12619},
-}
-```
