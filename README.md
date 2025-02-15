@@ -8,9 +8,6 @@ This repository provides two complementary metrics for quantifying LLM distillat
 
 **We prohibit the use of this research as a tool for competition and attacks between any entities.**
 
-<div align="center">
-    <img src="images/claim.png" width="100%" />
-</div>
 
 ## Introduction
 
