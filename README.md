@@ -31,6 +31,15 @@ Through this work, we advocate for more independent LLM development and transpar
 
 ## Main Result
 
+### Combination Evaluation
+
+
+
+<div align="center">
+    <img src="images/ice-rse.png" width="70%" />
+</div>
+
+
 ### Identity Consistency Evaluation (ICE) Results
 The ICE results show that *GLM4-Plus*, *Qwen-Max-0919*, and *DeepSeek-V3* are the three LLMs with the highest number of suspected responses, suggesting a higher degree of distillation. In contrast, *Claude-3.5-Sonnet* and *Doubao-Pro-32k* exhibited almost no suspicious responses, indicating a low likelihood of distillation for these LLMs.
 
