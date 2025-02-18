@@ -4,9 +4,10 @@ This repository provides two complementary metrics for quantifying LLM distillat
 
 ## ❗️Warning
 
-**Data distillation technology is one of the common techniques used in building LLMs. Our research focuses on quantifying and evaluating the degree of LLM distillation, aiming to promote greater transparency and diversity in the core technologies of LLMs.**
+**Data distillation technology is one of the common techniques used in building LLMs. Our research focuses on quantifying and evaluating the extent of LLM distillation, aiming to promote greater transparency and diversity in the core technologies of LLMs.**
 
 **We prohibit the use of this research as a tool for competition and attacks between any entities.**
+
 
 ## Introduction
 
@@ -26,9 +27,18 @@ Model distillation transfers knowledge from large language models to smaller one
 - Most popular LLMs show high distillation degrees, with exceptions like *Claude-3.5-Sonnet* and *Doubao-Pro-32k*
 - Base LLMs exhibit higher distillation degrees than aligned versions
 
-Through this work, we advocate for more independent LLM development and transparent technical documentation to enhance model robustness and safety.
+Through this work, we advocate for more independent LLM development and transparent technical documentation to enhance model robustness and safety. For more details, please refer to [our paper](./paper.pdf) or [arxiv](https://arxiv.org/abs/2501.12619).
 
 ## Main Result
+
+### Combination Evaluation
+
+
+
+<div align="center">
+    <img src="images/ice-rse.png" width="70%" />
+</div>
+
 
 ### Identity Consistency Evaluation (ICE) Results
 The ICE results show that *GLM4-Plus*, *Qwen-Max-0919*, and *DeepSeek-V3* are the three LLMs with the highest number of suspected responses, suggesting a higher degree of distillation. In contrast, *Claude-3.5-Sonnet* and *Doubao-Pro-32k* exhibited almost no suspicious responses, indicating a low likelihood of distillation for these LLMs.
