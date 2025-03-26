@@ -156,6 +156,10 @@ Next, we collect the evaluation prompt set mentioned above and request responses
 - Step 3:
 Finally, we combine the responses from the reference model and test model with the scoring prompt template. Using LLM as a judge, we calculate the response similarity score.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Aegis1863/LLMs-Distillation-Quantification&type=Date)](https://www.star-history.com/#Aegis1863/LLMs-Distillation-Quantification&Date)
+
 ## Citation
 
 ```
