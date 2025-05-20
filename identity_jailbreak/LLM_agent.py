@@ -46,7 +46,7 @@ class Llm_manager:
 
     def forward(self, prompts: str | list[str], do_sample:bool=False) -> list:
         if self.source == 'api':
-            reply = self.manager.ans_from_api(self.name, prompts=prompts)
+            reply = self.manager.ans_from_api(prompts=prompts)  # temperature directly set 0
         elif self.source == 'local':
             reply = self.manager.ans_from_local(prompts=prompts, do_sample=do_sample)
         return reply
